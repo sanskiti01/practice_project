@@ -1,0 +1,10 @@
+services:
+  buglab:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+      DATABASE_URL: file:./dev.db
+      AI_PROVIDER: mock
+      CLIENT_URL: http://localhost:5173
